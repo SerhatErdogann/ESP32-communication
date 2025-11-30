@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="468.0" prefWidth="350.0" spacing="30.0" style="-fx-background-color: linear-gradient(to bottom, #f0f4f8, #cfd8dc);" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.esp32haberlesme.SignalController">
+
+    <padding>
+        <Insets bottom="30" left="20" right="20" top="30" />
+    </padding>
+
+    <Label text="ESP32 Işık Kontrol Paneli">
+        <font>
+            <Font name="Segoe UI Bold" size="20" />
+        </font>
+    </Label>
+
+    <HBox alignment="CENTER" spacing="25">
+        <VBox alignment="CENTER_LEFT" spacing="8">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #222;" text="Renk Seç:" />
+            <ChoiceBox fx:id="colorChoiceBox" prefHeight="12.0" prefWidth="140.0" />
+        </VBox>
+
+
+        <VBox alignment="BOTTOM_CENTER">
+            <Button fx:id="btnOn" onAction="#onLightOnClicked" text="Işığı Aç" />
+        </VBox>
+    </HBox>
+    <Button fx:id="btnOff" onAction="#onLightOffClicked" text="Işığı Kapat" />
+   <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" />
+
+</VBox>
